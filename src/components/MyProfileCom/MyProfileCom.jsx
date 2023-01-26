@@ -2,15 +2,12 @@ import React from "react";
 
 import { Flex, Box, chakra, Stack, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import Fade from "react-reveal/Fade";
-import Tada from "react-reveal/Tada";
-import { useEffect } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const MyProfileCom = () => {
   return (
-    <Fade bottom>
+    <>
       <ToastContainer />
 
       <Flex
@@ -99,40 +96,38 @@ const MyProfileCom = () => {
             }}
             spacing={2}
           >
-            <Tada>
-              <Box display="inline-flex" rounded="md" shadow="md">
-                <Link to={"/createMyEmployee"}>
-                  <chakra.a
-                    display="inline-flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    px={5}
-                    py={3}
-                    border="solid transparent"
-                    fontWeight="bold"
-                    w="full"
-                    rounded="md"
-                    _light={{
-                      color: "#805AD5",
-                    }}
-                    bg="brand.600"
-                    _dark={{
-                      bg: "#805AD5",
-                    }}
-                    _hover={{
-                      border: "2px red",
-                      bg: "brand.700",
-                      _dark: {
-                        bg: "brand.600",
-                      },
-                    }}
-                    cursor="pointer"
-                  >
-                    Complete profile
-                  </chakra.a>
-                </Link>
-              </Box>
-            </Tada>
+            <Box display="inline-flex" rounded="md" shadow="md">
+              <Link to={"/createMyEmployee"}>
+                <chakra.a
+                  display="inline-flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  px={5}
+                  py={3}
+                  border="solid transparent"
+                  fontWeight="bold"
+                  w="full"
+                  rounded="md"
+                  _light={{
+                    color: "#805AD5",
+                  }}
+                  bg="brand.600"
+                  _dark={{
+                    bg: "#805AD5",
+                  }}
+                  _hover={{
+                    border: "2px red",
+                    bg: "brand.700",
+                    _dark: {
+                      bg: "brand.600",
+                    },
+                  }}
+                  cursor="pointer"
+                >
+                  Complete profile
+                </chakra.a>
+              </Link>
+            </Box>
           </Stack>
         </Box>
         <Box
@@ -229,40 +224,38 @@ const MyProfileCom = () => {
             }}
             spacing={2}
           >
-            <Tada>
-              <Box display="inline-flex" rounded="md" shadow="md">
-                <Link to="/getEmployeeProfile">
-                  <chakra.a
-                    display="inline-flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    px={5}
-                    py={3}
-                    border="solid transparent"
-                    fontWeight="bold"
-                    w="full"
-                    rounded="md"
-                    _light={{
-                      color: "#805AD5",
-                    }}
-                    bg="brand.600"
-                    _dark={{
-                      bg: "#805AD5",
-                    }}
-                    _hover={{
-                      border: "2px red",
-                      bg: "brand.700",
-                      _dark: {
-                        bg: "brand.600",
-                      },
-                    }}
-                    cursor="pointer"
-                  >
-                    Browse Employees
-                  </chakra.a>
-                </Link>
-              </Box>
-            </Tada>
+            <Box display="inline-flex" rounded="md" shadow="md">
+              <Link to="/getEmployeeProfile">
+                <chakra.a
+                  display="inline-flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  px={5}
+                  py={3}
+                  border="solid transparent"
+                  fontWeight="bold"
+                  w="full"
+                  rounded="md"
+                  _light={{
+                    color: "#805AD5",
+                  }}
+                  bg="brand.600"
+                  _dark={{
+                    bg: "#805AD5",
+                  }}
+                  _hover={{
+                    border: "2px red",
+                    bg: "brand.700",
+                    _dark: {
+                      bg: "brand.600",
+                    },
+                  }}
+                  cursor="pointer"
+                >
+                  Browse Employees
+                </chakra.a>
+              </Link>
+            </Box>
           </Stack>
         </Box>
         <Box
@@ -278,14 +271,11 @@ const MyProfileCom = () => {
             rounded="lg"
             shadow="2xl"
             src="https://ethereum.org/static/9a6e158f4ffd1cb5de246a3ecd0d7f86/b3831/hackathon_transparent.webp"
-            // src="https://media2.giphy.com/media/XD9o33QG9BoMis7iM4/giphy.gif?cid=fe3852a3ihg8rvipzzky5lybmdyq38fhke2tkrnshwk52c7d&rid=giphy.gif&ct=g"
-            // https://saas-ui.dev/_next/image?url=%2Fscreenshots%2Fbilling.png&w=1920&q=75
-            // https://saas-ui.dev/_next/image?url=%2Fscreenshots%2Fdashboard.png&w=1920&q=75
             alt="Hellonext feedback boards software screenshot"
           />
         </Box>
       </Flex>
-    </Fade>
+    </>
   );
 };
 

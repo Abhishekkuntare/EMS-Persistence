@@ -9,7 +9,6 @@ import {
   StackDivider,
   Icon,
   Badge,
-  Box,
 } from "@chakra-ui/react";
 import {
   IoAnalyticsSharp,

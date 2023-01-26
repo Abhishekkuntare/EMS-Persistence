@@ -65,13 +65,9 @@ function App() {
                 {!authState.status ? (
                   <>
                     <Header />
-                    {/* <Link to="/login"> Login</Link>
-                  <Link to="/registration"> Registration</Link> */}
                   </>
                 ) : (
                   <>
-                    {/* <Link to="/"> Home Page</Link>
-                  <Link to="/createpost"> Create A Post</Link> */}
                     <Header2 />
                   </>
                 )}

@@ -10,7 +10,6 @@ import {
   Heading,
   Text,
   useColorModeValue,
-  Badge,
 } from "@chakra-ui/react";
 
 import { Link } from "react-router-dom";

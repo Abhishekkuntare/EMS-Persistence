@@ -1,18 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
-import {
-  Flex,
-  Box,
-  Image,
-  Icon,
-  chakra,
-  Text,
-  Badge,
-  Highlight,
-  Button,
-} from "@chakra-ui/react";
-import Fade from "react-reveal/Fade";
+import { Flex, Box, Image, Badge, Button } from "@chakra-ui/react";
 
 const GetMyEmployeeProfile = () => {
   const [listofusers, setListOfUsers] = useState([]);
@@ -22,7 +11,7 @@ const GetMyEmployeeProfile = () => {
     });
   }, []);
   return (
-    <Fade top cascade>
+    <>
       <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
         {listofusers.map((value, key) => {
           return (
@@ -147,7 +136,7 @@ const GetMyEmployeeProfile = () => {
           );
         })}
       </div>
-    </Fade>
+    </>
   );
 };
 

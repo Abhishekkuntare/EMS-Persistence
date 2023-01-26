@@ -11,7 +11,7 @@ import {
   Stack,
   useColorMode,
   Text,
-  Badge,
+
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
 import "../../../App.css";

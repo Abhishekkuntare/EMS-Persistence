@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../helpers/AuthContext";
-import Fade from "react-reveal/Fade";
 import { AiFillDelete } from "react-icons/ai";
 
 import {
@@ -120,16 +119,11 @@ function Post() {
   };
 
   return (
-    <Fade top>
+    <>
       <Flex mt={30} justifyContent={"center"} fontWeight="500" fontSize="2xl">
         <Heading>Profile </Heading>
       </Flex>
-      <Flex
-        minH={"40vh"}
-        align={"center"}
-        justify={"center"}
-        // bg={useColorModeValue("gray.50", "gray.800")}
-      >
+      <Flex minH={"40vh"} align={"center"} justify={"center"}>
         <Stack
           spacing={4}
           w={"full"}
@@ -238,7 +232,7 @@ function Post() {
           </Flex>
         </Stack>
       </Flex>
-    </Fade>
+    </>
   );
 }
 

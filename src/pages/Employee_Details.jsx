@@ -3,8 +3,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../helpers/AuthContext";
-import Fade from "react-reveal/Fade";
-import Tada from "react-reveal/Tada";
 
 import {
   Heading,
@@ -15,11 +13,7 @@ import {
   Stack,
   Button,
   List,
-  ListItem,
-  ListIcon,
-  useColorModeValue,
   Badge,
-  FormLabel,
 } from "@chakra-ui/react";
 import { AiFillHeart } from "react-icons/ai";
 
@@ -85,7 +79,7 @@ function Employee_Details() {
   };
 
   return (
-    <Fade top>
+    <>
       <Center>
         {" "}
         <Box py={4}>
@@ -179,33 +173,24 @@ function Employee_Details() {
                         {value.title}
                       </Heading>
 
-                      {/* <Text
-                        onClick={() => {
-                          history.push(`/post/${value.id}`);
-                        }}
-                      >
-                        {value.postText}
-                      </Text> */}
-                      <Tada>
-                        <Link to={`/profile/${value.UserId}`}>
-                          <Button
-                            mt={10}
-                            w={"full"}
-                            bg={"green.400"}
-                            color={"white"}
-                            rounded={"xl"}
-                            boxShadow={"0 5px 20px 0px rgb(72 187 120 / 43%)"}
-                            _hover={{
-                              bg: "green.200",
-                            }}
-                            _focus={{
-                              bg: "green.900",
-                            }}
-                          >
-                            Profile
-                          </Button>
-                        </Link>
-                      </Tada>
+                      <Link to={`/profile/${value.UserId}`}>
+                        <Button
+                          mt={10}
+                          w={"full"}
+                          bg={"green.400"}
+                          color={"white"}
+                          rounded={"xl"}
+                          boxShadow={"0 5px 20px 0px rgb(72 187 120 / 43%)"}
+                          _hover={{
+                            bg: "green.200",
+                          }}
+                          _focus={{
+                            bg: "green.900",
+                          }}
+                        >
+                          Profile
+                        </Button>
+                      </Link>
                     </div>
                   </List>
                 </Box>
@@ -214,7 +199,7 @@ function Employee_Details() {
           );
         })}
       </Box>
-    </Fade>
+    </>
   );
 }
 

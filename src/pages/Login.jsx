@@ -15,7 +15,6 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Fade from "react-reveal/Fade";
 
 import { Link } from "react-router-dom";
 
@@ -44,7 +43,7 @@ export default function Login() {
   };
 
   return (
-    <Fade top>
+    <>
       <Flex
         minH={"80vh"}
         align={"center"}
@@ -112,6 +111,6 @@ export default function Login() {
           </Box>
         </Stack>
       </Flex>
-    </Fade>
+    </>
   );
 }

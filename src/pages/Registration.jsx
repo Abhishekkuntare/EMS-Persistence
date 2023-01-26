@@ -15,7 +15,6 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import axios from "axios";
-import Fade from "react-reveal/Fade";
 
 function Registration() {
   const navigate = useNavigate();
@@ -37,7 +36,7 @@ function Registration() {
   };
 
   return (
-    <Fade top>
+    <>
       <Flex
         minH={"80vh"}
         align={"center"}
@@ -138,7 +137,7 @@ function Registration() {
           </Box>
         </Stack>
       </Flex>
-    </Fade>
+    </>
   );
 }
 

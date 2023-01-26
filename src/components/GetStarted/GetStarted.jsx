@@ -9,8 +9,6 @@ import {
   useColorModeValue,
   createIcon,
 } from "@chakra-ui/react";
-import Fade from "react-reveal/Fade";
-import Tada from "react-reveal/Tada";
 import { Link } from "react-router-dom";
 
 export default function GetStarted() {
@@ -23,24 +21,22 @@ export default function GetStarted() {
           spacing={{ base: 8, md: 14 }}
           py={{ base: 20, md: 36 }}
         >
-          <Fade bottom>
-            <Heading
-              fontWeight={600}
-              fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-              lineHeight={"110%"}
-            >
-              To create the best employee <br />
-              <Text as={"span"} color={"green.400"}>
-                management strategy
-              </Text>
-            </Heading>
-            <Text color={"gray.500"}>
-              Our employee management software, is a comprehensive and intuitive
-              solution that can take your employee management strategy to the
-              next level. It has everything you need to help your employees
-              unlock their full potential
+          <Heading
+            fontWeight={600}
+            fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+            lineHeight={"110%"}
+          >
+            To create the best employee <br />
+            <Text as={"span"} color={"green.400"}>
+              management strategy
             </Text>
-          </Fade>
+          </Heading>
+          <Text color={"gray.500"}>
+            Our employee management software, is a comprehensive and intuitive
+            solution that can take your employee management strategy to the next
+            level. It has everything you need to help your employees unlock
+            their full potential
+          </Text>
           <Stack
             direction={"column"}
             spacing={3}
@@ -48,21 +44,19 @@ export default function GetStarted() {
             alignSelf={"center"}
             position={"relative"}
           >
-            <Tada>
-              <Link to="/create_employee">
-                <Button
-                  colorScheme={"green"}
-                  bg={"green.400"}
-                  rounded={"full"}
-                  px={6}
-                  _hover={{
-                    bg: "green.500",
-                  }}
-                >
-                  Get Started
-                </Button>
-              </Link>
-            </Tada>
+            <Link to="/create_employee">
+              <Button
+                colorScheme={"green"}
+                bg={"green.400"}
+                rounded={"full"}
+                px={6}
+                _hover={{
+                  bg: "green.500",
+                }}
+              >
+                Get Started
+              </Button>
+            </Link>
             <Box>
               <Icon
                 as={Arrow}

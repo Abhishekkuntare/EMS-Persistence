@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../helpers/AuthContext";
-import Tada from "react-reveal/Tada";
 
 import {
   Box,
@@ -12,14 +11,9 @@ import {
   Text,
   VStack,
   useColorModeValue,
-  List,
-  ListItem,
-  ListIcon,
   Button,
   Flex,
 } from "@chakra-ui/react";
-import { FaCheckCircle } from "react-icons/fa";
-import Fade from "react-reveal/Fade";
 
 function Profile() {
   let { id } = useParams();
@@ -39,7 +33,7 @@ function Profile() {
   }, []);
 
   return (
-    <Fade top>
+    <>
       <Box py={12}>
         <VStack spacing={2} textAlign="center">
           <Heading as="h1" fontSize="4xl">
@@ -97,19 +91,17 @@ function Profile() {
                       </Button>
                       {/* )} */}
 
-                      <Tada>
-                        <Box
-                          onClick={() => {
-                            history(`/post/${value.id}`);
-                          }}
-                          w="100%"
-                          pt={7}
-                        >
-                          <Button w="full" colorScheme="red" variant="outline">
-                            Update Profile
-                          </Button>
-                        </Box>
-                      </Tada>
+                      <Box
+                        onClick={() => {
+                          history(`/post/${value.id}`);
+                        }}
+                        w="100%"
+                        pt={7}
+                      >
+                        <Button w="full" colorScheme="red" variant="outline">
+                          Update Profile
+                        </Button>
+                      </Box>
                     </div>
                   );
                 })}
@@ -118,7 +110,7 @@ function Profile() {
           </PriceWrapper>
         </Stack>
       </Box>
-    </Fade>
+    </>
   );
 }
 
