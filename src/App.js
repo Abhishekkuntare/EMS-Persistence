@@ -52,7 +52,7 @@ function App() {
           });
         }
       });
-  }, []);
+  }, [setAuthState]);
 
   return (
     <>
